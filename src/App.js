@@ -1,30 +1,48 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import './App.css';
 
 const SLEEP_TIME = 5000;
 
 class App extends Component {
   state = {
-    isLightOn: false,
+    isBuzzerPressed: false,
   }
 
   onClick = () => {
     this.setState({
-      isLightOn: true,
+      isBuzzerPressed: true,
     });
 
     setTimeout(() => {
       this.setState({
-        isLightOn: false,
+        isBuzzerPressed: false,
       });
     }, SLEEP_TIME)
   }
 
   render() {
+    const buttonClass = classNames({
+      'button': true,
+      'button--active': this.state.isBuzzerPressed,
+    });
+
+    const buttonText = this.state.isBuzzerPressed
+      ? "Buzzing..."
+      : "Unlock Door";
+
     return (
-      <div className="App">
-        <button onClick={this.onClick}>Click Me</button>
-        <div>{`${this.state.isLightOn}`}</div>
+      <div className="app">
+        <div className="main">
+          <button
+            className={buttonClass}
+            onClick={this.onClick}
+            disabled={this.state.isBuzzerPressed}
+          >
+            <div class="loader button__loader" />
+            <span>{buttonText}</span>
+          </button>
+        </div>
       </div>
     );
   }
