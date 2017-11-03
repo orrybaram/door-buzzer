@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { primaryColor } from '../../styles';
 
 export default styled.button`
   background: ${primaryColor};
+  border: 0;
   border-bottom: 3px solid #6d92c1;
   border-radius: 4px;
   box-shadow: 0 2px 5px #0000002e;

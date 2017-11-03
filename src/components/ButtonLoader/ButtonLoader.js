@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { rotate360 } from '../../styles';
 
 const Loader = styled.div`
@@ -22,7 +22,7 @@ const Loader = styled.div`
   }
 `;
 
-export default Loader.extend`
+export default styled(Loader)`
   float: left;
   position: absolute;
   left: ${props => props.active ? '15px' : '-50px'};

@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'react-emotion';
+import { keyframes } from 'emotion';
 
 export const primaryColor = '#77bce6';
 
