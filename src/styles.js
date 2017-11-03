@@ -1,9 +1,8 @@
-import styled from 'react-emotion';
-import { keyframes } from 'emotion';
+import { css, keyframes } from 'emotion';
 
 export const primaryColor = '#77bce6';
 
-export const Root = styled.div`
+export const Root = css`
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@ export const Root = styled.div`
   align-items: center;
 `;
 
-export const Main = styled.main`
+export const Main = css`
   width: 50%;
   height: 100%;
   display: flex;

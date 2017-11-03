@@ -28,8 +28,8 @@ class App extends Component {
       : "Unlock Door";
 
     return (
-      <Root>
-        <Main>
+      <div className={Root}>
+        <main className={Main}>
           <Button
             onClick={this.onClick}
             disabled={this.state.isBuzzerPressed}
@@ -37,8 +37,8 @@ class App extends Component {
             <ButtonLoader active={this.state.isBuzzerPressed} />
             <span>{buttonText}</span>
           </Button>
-        </Main>
-      </Root>
+        </main>
+      </div>
     );
   }
 }
