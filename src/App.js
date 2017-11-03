@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Root, Main } from './styles';
 import Button from './components/Button';
 import ButtonLoader from './components/ButtonLoader';
+import ShakeyText from './components/ShakeyText';
 
 const SLEEP_TIME = 5000;
 
@@ -35,7 +36,7 @@ class App extends Component {
             disabled={this.state.isBuzzerPressed}
           >
             <ButtonLoader active={this.state.isBuzzerPressed} />
-            <span>{buttonText}</span>
+            <ShakeyText active={this.state.isBuzzerPressed}>{buttonText}</ShakeyText>
           </Button>
         </main>
       </div>

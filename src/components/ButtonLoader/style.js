@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 import styled from 'react-emotion';
-import { rotate360 } from '../../styles';
+import { animationRotate360 } from '../../styles';
 
 const Loader = css`
   font-size: 10px;
@@ -11,7 +11,7 @@ const Loader = css`
   border-bottom: 4px solid rgba(255, 255, 255, 0.2);
   border-left: 4px solid #ffffff;
   transform: translateZ(0);
-  animation: ${rotate360} 1.1s infinite linear;
+  animation: ${animationRotate360} 1.1s infinite linear;
   border-radius: 50%;
   width: 20px;
   height: 20px;

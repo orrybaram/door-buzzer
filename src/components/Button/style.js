@@ -15,6 +15,7 @@ export default css`
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
+  transition: all 0.2s;
 
   &:hover {
     background: #6eadd3;
@@ -30,7 +31,7 @@ export default css`
 
   &:disabled {
     background: #88a6b7;
-    color: #ffffff59;
+    color: #ffffffc4;
     border-bottom: 3px solid #7d8793;
   }
 `;

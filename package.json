@@ -91,7 +91,7 @@
       "react-app"
     ],
     "plugins": [
-      "emotion"
+      ["emotion", { "sourceMap": true }]
     ]
   },
   "eslintConfig": {

@@ -18,7 +18,7 @@ export const Main = css`
   justify-content: center;
 `;
 
-export const rotate360 = keyframes`
+export const animationRotate360 = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -27,3 +27,21 @@ export const rotate360 = keyframes`
     transform: rotate(360deg);
   }
 `;
+
+export const animationShake = keyframes`
+  from, 20%, 53%, 80%, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%, 43% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+`
