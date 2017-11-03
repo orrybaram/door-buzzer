@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import './App.css';
+import styles from './App.css';
 
 const SLEEP_TIME = 5000;
 
@@ -22,9 +22,9 @@ class App extends Component {
   }
 
   render() {
-    const buttonClass = classNames({
-      'button': true,
-      'button--active': this.state.isBuzzerPressed,
+    const buttonLoaderClass = classNames({
+      [styles.buttonLoader]: true,
+      [styles.buttonLoaderActive]: this.state.isBuzzerPressed,
     });
 
     const buttonText = this.state.isBuzzerPressed
@@ -32,14 +32,14 @@ class App extends Component {
       : "Unlock Door";
 
     return (
-      <div className="app">
-        <div className="main">
+      <div className={styles.app}>
+        <div className={styles.main}>
           <button
-            className={buttonClass}
+            className={styles.button}
             onClick={this.onClick}
             disabled={this.state.isBuzzerPressed}
           >
-            <div class="loader button__loader" />
+            <div className={buttonLoaderClass} />
             <span>{buttonText}</span>
           </button>
         </div>
