@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
-import { Root, Main, Button, ButtonLoader } from './styles';
+import { Root, Main } from './styles';
+import Button from './components/Button';
+import ButtonLoader from './components/ButtonLoader';
 
 const SLEEP_TIME = 5000;
 
@@ -22,11 +23,6 @@ class App extends Component {
   }
 
   render() {
-    const buttonClass = classNames({
-      'button': true,
-      'button--active': this.state.isBuzzerPressed,
-    });
-
     const buttonText = this.state.isBuzzerPressed
       ? "Buzzing..."
       : "Unlock Door";
@@ -35,7 +31,6 @@ class App extends Component {
       <Root>
         <Main>
           <Button
-            className={buttonClass}
             onClick={this.onClick}
             disabled={this.state.isBuzzerPressed}
           >
